@@ -20,9 +20,10 @@ if np.any(canvas_result.image_data):
     # Make prediction using model
     prediction = model.predict(processed_image).argmax()
     # Display prediction
-    st.header('Prediction:')
+    st.header('Prediccion:')
     st.markdown('This number appears to be a \n # :red[' + str(prediction) + ']')
+    st.ballooons()
 else:
     # Display message if canvas is empty
-    st.header('Prediction:')
+    st.header('predicción:')
     st.write('Escribe un número')
