@@ -20,7 +20,7 @@ if np.any(canvas_result.image_data):
     # Make prediction using model
     prediction = model.predict(processed_image).argmax()
     # Display prediction
-    st.header('Prediccion:')
+    st.header('Predicción:')
     st.markdown('This number appears to be a \n # :red[' + str(prediction) + ']')
     st.balloons()
 else:
