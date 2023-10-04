@@ -22,7 +22,7 @@ if np.any(canvas_result.image_data):
     # Display prediction
     st.header('Prediccion:')
     st.markdown('This number appears to be a \n # :red[' + str(prediction) + ']')
-    st.ballooons()
+    st.balloons()
 else:
     # Display message if canvas is empty
     st.header('predicción:')
