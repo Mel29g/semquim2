@@ -4,12 +4,12 @@ import numpy as np
 from scipy.ndimage.interpolation import zoom
 from streamlit_drawable_canvas import st_canvas
 from utils import process_image
-st.markdown("# Digit :red[Reconocimiento] :green[aplicación] :pencil: 💻")
+st.markdown("# Reconocimiento de :red[dígitos] :green[Aplicación] :pencil: 💻")
 
 # Load trained model
 model = tf.keras.models.load_model('mi_modelo.h5')
 
-st.write('Draw a digit:')
+st.write('Dibuja un dígito:')
 # Display canvas for drawing
 canvas_result = st_canvas(stroke_width=10, height=28*5, width=28*5)
   
@@ -25,5 +25,5 @@ if np.any(canvas_result.image_data):
     st.balloons()
 else:
     # Display message if canvas is empty
-    st.header('predicción:')
+    st.header('Predicción:')
     st.write('Escribe un número')
